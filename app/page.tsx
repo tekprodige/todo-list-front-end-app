@@ -26,9 +26,9 @@ const Home = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        console.log('Fetching tasks from /tasks'); // Log the request
+        console.log('Fetching tasks from /tasks');
         const response = await apiClient.get<Task[]>('/tasks');
-        console.log('Tasks fetched:', response.data); // Log the response
+        console.log('Tasks fetched:', response.data);
         setTasks(response.data);
       } catch (err) {
         console.error('Failed to fetch tasks:', err);
