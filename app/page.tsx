@@ -41,6 +41,10 @@ const Home = () => {
     fetchTasks();
   }, []);
 
+   // Calculate task counts
+   const totalTasks = tasks.length;
+   const completedTasks = tasks.filter((task) => task.completed).length;
+
   // Handle loading and error states
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Failed to load tasks. Please try again later.</p>;
@@ -55,7 +59,7 @@ const Home = () => {
       <CreateTaskBtn />
 
       {/* Counters Section */}
-      <Progress />
+      <Progress  totalTasks={totalTasks} completedTasks={completedTasks}/>
 
       {/* Show EmptyState if no tasks exist */}
       {isEmpty ? <EmptyState /> : <TaskList tasks={tasks} setTasks={setTasks} />}
