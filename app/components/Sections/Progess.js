@@ -3,7 +3,7 @@ import Counter from "@/app/components/Counter";
 
 const Progress = () => {
   return (
-    <section className="w-full max-w-2xl mt-8">
+    <section className="w-full max-w-2xl mt-12">
       <header className="sr-only">
         <h2>Task Statistics</h2>
       </header>

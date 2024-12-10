@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="flex items-center space-x-3 bg-black w-full h-20 justify-center" role="banner">
+    <header className="flex items-center space-x-3 bg-black w-full h-32 justify-center" role="banner">
         
       {/* Rocket Icon */}
       <Image src={rocket} width={20} height={20} alt="picture of rocket" />

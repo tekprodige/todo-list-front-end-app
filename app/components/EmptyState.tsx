@@ -2,7 +2,7 @@
 export default function EmptyState() {
     return (
         <div
-            className="text-center border border-dashed border-gray-300 p-6 rounded-lg bg-white shadow-sm"
+            className="text-center border-gray-300 p-6 rounded-lg bg-transparent shadow-sm mt-32"
             role="region"
             aria-labelledby="empty-state-title"
         >
@@ -20,19 +20,6 @@ export default function EmptyState() {
                 You don't have any tasks registered yet. Create tasks and organize your to-do
                 items.
             </p>
-            {/* Create Task Button */}
-            <div className="mt-6">
-                <button
-                    type="button"
-                    className="flex items-center bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600"
-                    aria-label="Create Task"
-                >
-                    <span className="mr-2">Create Task</span>
-                    <span className="text-xl" aria-hidden="true">
-                        ➕
-                    </span>
-                </button>
-            </div>
         </div>
     );
 }
