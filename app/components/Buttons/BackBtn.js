@@ -5,7 +5,7 @@ import Link from 'next/link';
 const BackBtn = () => 
 {
   return (
-   <Link href={"/"} className='text-4xl ml-48'>{"🔙"}</Link>
+   <Link href={"/"} className='text-4xl '>{"🔙"}</Link>
   )
 }
 
