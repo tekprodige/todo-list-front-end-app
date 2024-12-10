@@ -1,8 +1,7 @@
-// components/TaskList.tsx
-import TaskCard from "@/app/components/Cards/TaskCard";
-import apiClient from "@/app/components/lib/axios";
-import { useState } from "react";
 
+import TaskCard from "@/app/components/Cards/TaskCard";
+
+// Define Task type
 type Task = {
   id: number;
   title: string;
@@ -10,9 +9,10 @@ type Task = {
   color: string;
 };
 
+// Define props for TaskList
 type TaskListProps = {
-  tasks: Task[];
-  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+  tasks: Task[]; // Array of tasks
+  setTasks: React.Dispatch<React.SetStateAction<Task[]>>; // State updater for tasks
 };
 
 const TaskList = ({ tasks, setTasks }: TaskListProps) => {
@@ -34,14 +34,15 @@ const TaskList = ({ tasks, setTasks }: TaskListProps) => {
     <ul role="list" className="space-y-4">
       {tasks.map((task) => (
         <TaskCard
-          key={task.id}
-          task={task}
-          onToggle={() => toggleTaskCompletion(task.id, task.completed)}
-          onDelete={() => deleteTask(task.id)}
+          key={task.id} // React key for each list item
+          task={task} // Pass the task object
+          onToggle={() => toggleTaskCompletion(task.id, task.completed)} // Toggle completion
+          onDelete={() => deleteTask(task.id)} // Delete task
         />
       ))}
     </ul>
   );
-};
+}
 
-export default TaskList;
+
+export default TaskList
