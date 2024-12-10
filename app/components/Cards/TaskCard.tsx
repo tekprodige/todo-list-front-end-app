@@ -20,7 +20,7 @@ type TaskItemProps = {
 const TaskCard = ({ task, onToggle, onDelete }: TaskItemProps) => {
   return (
     <li
-      className="flex items-center justify-between p-4 rounded-md bg-white shadow-md"
+      className="flex items-center justify-between p-4 rounded-md bg-white w-full shadow-md"
       style={{ borderLeft: `4px solid ${task.color}` }}
     >
       {/* Checkbox for completion */}

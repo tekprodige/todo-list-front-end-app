@@ -31,7 +31,7 @@ const TaskList = ({ tasks, setTasks }: TaskListProps) => {
   };
 
   return (
-    <ul role="list" className="space-y-4">
+    <ul role="list" className="space-y-4 w-5/12 mt-8">
       {tasks.map((task) => (
         <TaskCard
           key={task.id} // React key for each list item
