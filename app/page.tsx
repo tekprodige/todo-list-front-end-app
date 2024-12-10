@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-import Header from "@/app/components/Header";
 import Progress from "@/app/components/Sections/Progess";
 import CreateTaskBtn from "./components/Buttons/CreateTaskBtn";
 import apiClient from "@/app/components/lib/axios";
@@ -49,8 +48,6 @@ const Home = () => {
 
   return (
     <main className="min-h-screen bg-gray-900 flex flex-col items-center">
-      {/* Header */}
-      <Header />
 
       {/*Create new tasks button */}
       <CreateTaskBtn />
